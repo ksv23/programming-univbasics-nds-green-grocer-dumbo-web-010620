@@ -6,7 +6,7 @@ def find_item_by_name_in_collection(name, collection) #array of hashes
   # Consult README for inputs and outputs
 
     #1. iterate array of hashes
-    #2. check each item if 
+    #2. check each item if
   row_index = 0
 
   while row_index < collection.length do
@@ -31,7 +31,7 @@ def consolidate_cart(cart)
   while row_index < cart.length do
       new_item = find_item_by_name_in_collection(cart[counter][:item], new_cart)
 
-      if new_item != nil 
+      if new_item != nil
           new_item[row_index] += 1
       else
         new_item = {
@@ -39,7 +39,7 @@ def consolidate_cart(cart)
           :price => cart[counter][:price],
           :clearance => cart[counter][:clearance],
           :count => 1
-        } 
+        }
         new_cart << new_item
       end
       row_index += 1
