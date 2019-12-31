@@ -39,7 +39,7 @@ def consolidate_cart(cart)
           :clearance => cart[counter][:clearance],
           :count => 1
         }
-        new_cart << new_item #shoving the new hash into new array
+        new_cart << cart[counter] #shoving the new hash into new array
       end
       counter += 1
   end
