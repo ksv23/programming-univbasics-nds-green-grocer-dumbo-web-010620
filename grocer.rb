@@ -7,13 +7,13 @@ def find_item_by_name_in_collection(name, collection) #array of hashes
 
     #1. iterate array of hashes
     #2. check each item if
-  row_index = 0
+  counter = 0
 
   while row_index < collection.length do
-    if collection[row_index][:item] == name
-      return collection[row_index]          #return will exit the method and will return collection[row_index] return the item IF true
+    if collection[counter][:item] == name
+      return collection[counter]          #return will exit the method and will return collection[row_index] return the item IF true
     end
-    row_index += 1
+    counter += 1
   end
 
   nil
