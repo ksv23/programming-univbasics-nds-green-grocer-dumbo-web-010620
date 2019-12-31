@@ -30,7 +30,6 @@ def consolidate_cart(cart)
 
   while row_index < cart.length do
       new_item = find_item_by_name_in_collection(cart[row_index][:item], new_cart)
-
       if new_item != nil
           new_item[row_index] += 1
       else
@@ -40,7 +39,7 @@ def consolidate_cart(cart)
           :clearance => cart[row_index][:clearance],
           :count => 1
         }
-        new_cart << new_item
+        new_cart << new_item #shoving the new hash into new array
       end
       row_index += 1
   end
