@@ -51,9 +51,9 @@ def apply_coupons(cart, coupons)
   #
   # REMEMBER: This method **should** update cart
   row_index = 0
-  while row_index < coupons.length do
+  while row_index < coupons.length
       cart_item = find_item_by_name_in_collection(coupons[row_index][:item], cart)
-      coupons_item_name = "#{coupons[row_index][:item]}W/COUPON"
+      coupons_item_name = "#{coupons[row_index][:item]} W/COUPON"
       cart_item_w_coupon = find_item_by_name_in_collection(couponed_item_name, cart)
       if cart_item && cart_item[:count] >= coupons[row_index][:num]
         if cart_item_w_coupon
